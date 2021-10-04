@@ -17,6 +17,10 @@ public class Trade {
         this.quantity = quantity;
     }
 
+    public int getQuantity() {
+        return quantity;
+    }
+
     public void setPrice(double price) {
         if (price > 0) {
             this.price = price;

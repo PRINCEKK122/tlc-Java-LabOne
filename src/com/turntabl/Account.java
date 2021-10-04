@@ -1,13 +1,13 @@
 package com.turntabl;
 
 public class Account {
-    private int tradeVal;
+    private int totalVal;
 
-    public int getTradeVal() {
-        return tradeVal;
+    public int getTotalVal() {
+        return totalVal;
     }
 
-    public void setTradeVal(int tradeVal) {
-        this.tradeVal = tradeVal;
+    public void setTotalVal(double totalVal) {
+        this.totalVal += totalVal;
     }
 }
