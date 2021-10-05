@@ -1,14 +1,15 @@
 package com.turntabl;
 
-public class Trade {
-    private String id;
-    private String symbol;
-    private int quantity;
+public abstract class Trade {
+    private final String id;
+    private final String symbol;
+    private final int quantity;
     private double price;
 
+    // constructors
     public Trade(String id, String symbol, int quantity, double price) {
         this(id, symbol, quantity);
-        this.price = price;
+        this.setPrice(price);
     }
 
     public Trade(String id, String symbol, int quantity) {
@@ -17,8 +18,13 @@ public class Trade {
         this.quantity = quantity;
     }
 
+    // Getters and setters
     public int getQuantity() {
-        return quantity;
+        return this.quantity;
+    }
+
+    public double getPrice() {
+        return price;
     }
 
     public void setPrice(double price) {
@@ -30,9 +36,7 @@ public class Trade {
         throw new IllegalArgumentException("Price cannot be negative");
     }
 
-    public double getPrice() {
-        return price;
-    }
+    abstract double calcDividend();
 
     @Override
     public String toString() {
