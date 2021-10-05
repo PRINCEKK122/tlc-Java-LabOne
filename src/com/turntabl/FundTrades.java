@@ -9,7 +9,7 @@ public class FundTrades extends Trade {
         this.setPercentage(percentage);
     }
 
-    private void setPercentage(int percentage) {
+    private void setPercentage(double percentage) {
         if (percentage < 0 || percentage > 100) {
             throw new IllegalArgumentException("Please percentage should be between the range of 1 - 100");
         }
