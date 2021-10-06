@@ -1,14 +1,17 @@
 package com.turntabl;
 
-import java.util.Arrays;
-import java.util.concurrent.ThreadLocalRandom;
+import java.time.*;
+import java.util.function.BiFunction;
+import java.util.function.Function;
+
 
 public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        var newFund = new FundTrades("1", "EPL", 3, 33.99, 5);
-        System.out.println("Price " + newFund.getPrice());
-        System.out.println("CalcDividend: " + newFund.calcDividend());
+
     }
+
+//    public static Function<Integer, Integer> multBy(int n) {
+//    }
 }
